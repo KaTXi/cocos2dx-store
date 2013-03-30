@@ -29,7 +29,7 @@ GameMenuItem* GameMenuItem::itemWithLabel(CCNode*label, CCObject* target, SEL_Me
 void GameMenuItem::selected()
 {
 	// subclass to change the default action
-	if(m_bIsEnabled)
+	if(m_bEnabled)
 	{
 		CCMenuItem::selected();
 
@@ -52,7 +52,7 @@ void GameMenuItem::selected()
 void GameMenuItem::unselected()
 {
 	// subclass to change the default action
-	if (m_bIsEnabled)
+	if (m_bEnabled)
 	{
 		CCMenuItem::unselected();
 		this->stopActionByTag(kZoomActionTag);
